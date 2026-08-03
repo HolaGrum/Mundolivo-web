@@ -1,0 +1,249 @@
+/* ============================================
+   RESPONSIVE OVERRIDES FOR APPSHELL ADMIN
+   ============================================ */
+
+/* --- Mobile Menu Overlay --- */
+#mobile-sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+    transition: opacity 0.3s ease;
+}
+#mobile-sidebar-overlay.show {
+    display: block;
+}
+
+/* --- Mobile Menu --- */
+#mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 280px;
+    height: 100vh;
+    background: linear-gradient(0deg, #1a2e44 5%, #0e1c2c 100%);
+    overflow-y: auto;
+    z-index: 9999;
+    transition: left 0.3s ease;
+    padding-bottom: 2rem;
+    color: #fff;
+}
+#mobile-menu.show {
+    display: block;
+    left: 0;
+}
+#mobile-menu a {
+    color: #fff;
+    text-decoration: none;
+}
+#mobile-menu .nav-link {
+    padding: 0.75rem 1rem;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
+}
+#mobile-menu .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+#mobile-menu .nav-dropdown-toggle {
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+#mobile-menu .nav-dropdown-items .nav-link {
+    padding-left: 2.5rem;
+    font-size: 0.9rem;
+}
+.mobile-menu-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* --- Mobile: Hide sidebar, show hamburger --- */
+@media (max-width: 767.98px) {
+    .sidebar {
+        display: none !important;
+    }
+
+    #hamburger {
+        display: flex !important;
+        align-items: center;
+        padding: 0.5rem;
+        color: inherit;
+    }
+    #hamburger svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .main {
+        width: 100% !important;
+        position: relative !important;
+        padding-left: 0 !important;
+        right: auto !important;
+    }
+
+    .appshell-header {
+        padding: 0.75rem 1rem;
+    }
+    .appshell-header h1 {
+        font-size: 1.1rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /* Make card tables horizontally scrollable */
+    .card-body table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Dashboard cards */
+    .row.g-4 > [class*="col-"] {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    /* Card body padding */
+    .card-body {
+        padding: 1rem;
+    }
+
+    /* Breadcrumbs */
+    .breadcrumb {
+        font-size: 0.85rem;
+    }
+
+    /* Form controls full width */
+    .form-control,
+    .form-select {
+        width: 100%;
+    }
+
+    /* Buttons stack */
+    .btn + .btn {
+        margin-top: 0.25rem;
+    }
+
+    /* Modal adjustments */
+    .modal-dialog {
+        margin: 0.5rem;
+        max-width: calc(100vw - 1rem);
+    }
+
+    /* Fix page header on mobile */
+    .appshell-header .d-flex {
+        flex-wrap: nowrap;
+    }
+
+    /* Pagination */
+    .pagination {
+        flex-wrap: wrap;
+    }
+}
+
+/* --- Tablet: Narrower sidebar --- */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .main {
+        padding-left: calc(30px + 220px) !important;
+    }
+
+    .sidebar {
+        min-width: 220px;
+    }
+    .sidebar-menu {
+        width: 220px;
+    }
+
+    .sidebar-nav .nav-link {
+        padding: 0.6rem 0.75rem;
+        font-size: 0.85rem;
+    }
+
+    .sidebar-nav .nav-link i {
+        margin-right: 0.4rem;
+    }
+
+    .sidebar-logo-text {
+        font-size: 0.95rem;
+    }
+
+    .sidebar-logo-img {
+        max-height: 18px;
+    }
+}
+
+/* --- Large screens: Full sidebar --- */
+@media (min-width: 992px) {
+    .main {
+        padding-left: calc(30px + 268px) !important;
+    }
+}
+
+/* --- General responsive helpers --- */
+@media (max-width: 575.98px) {
+    .appshell-header h1 {
+        font-size: 0.95rem;
+    }
+
+    .breadcrumb-item + .breadcrumb-item::before {
+        content: "/";
+        padding: 0 0.25rem;
+    }
+
+    .card-header {
+        padding: 0.75rem 1rem;
+    }
+}
+
+/* --- Fix sidebar scroll on desktop --- */
+@media (min-width: 768px) {
+    .sidebar {
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .sidebar-nav {
+        overflow-y: auto;
+        flex: 1;
+    }
+}
+
+/* --- Fix main content overflow --- */
+.main {
+    overflow-x: hidden;
+}
+
+/* --- Fix dropdown menus on mobile --- */
+@media (max-width: 767.98px) {
+    .dropdown-menu {
+        position: fixed !important;
+        left: 1rem !important;
+        right: 1rem !important;
+        max-width: calc(100vw - 2rem);
+    }
+}
+
+/* --- Print styles --- */
+@media print {
+    .sidebar,
+    #mobile-menu,
+    #mobile-sidebar-overlay,
+    #hamburger,
+    .appshell-header {
+        display: none !important;
+    }
+
+    .main {
+        padding-left: 0 !important;
+        position: static !important;
+    }
+}

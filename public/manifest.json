@@ -1,0 +1,42 @@
+{
+  "_module.esm-CZ744LZi.js": {
+    "file": "assets/module.esm-CZ744LZi.js",
+    "name": "module.esm"
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-CEwZte8_.css",
+    "src": "resources/css/app.css",
+    "isEntry": true,
+    "name": "app",
+    "names": [
+      "app.css"
+    ]
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-OKHAmTrD.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "imports": [
+      "_module.esm-CZ744LZi.js"
+    ]
+  },
+  "vendor/konekt/appshell/src/resources/assets/js/appshell.standalone.esm.js": {
+    "file": "assets/appshell.standalone.esm-DJ1sYKJt.js",
+    "name": "appshell.standalone.esm",
+    "src": "vendor/konekt/appshell/src/resources/assets/js/appshell.standalone.esm.js",
+    "isEntry": true,
+    "imports": [
+      "_module.esm-CZ744LZi.js"
+    ]
+  },
+  "vendor/konekt/appshell/src/resources/assets/sass/appshell.sass": {
+    "file": "css/appshell.css",
+    "src": "vendor/konekt/appshell/src/resources/assets/sass/appshell.sass",
+    "isEntry": true,
+    "name": "appshell",
+    "names": [
+      "appshell.css"
+    ]
+  }
+}
