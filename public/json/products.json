@@ -2,7 +2,7 @@
   "products": [
     {
       "id": 0,
-      "title": "Pintura Interior Blanco Mate 1L",
+      "title": "Pintura Interior Blanco   ",
       "description": "Pintura acrílica para interiores, acabado mate, excelente cubrimiento.",
       "price": 12.9,
       "currencyFormat": "$",
@@ -15,7 +15,7 @@
     },
     {
       "id": 1,
-      "title": "Pintura Exterior Premium 4L",
+      "title": "Pintura Exterior  ",
       "description": "Resistente a la intemperie y a la decoloración, ideal para fachadas.",
       "price": 39.5,
       "currencyFormat": "$",
@@ -41,7 +41,7 @@
     },
     {
       "id": 3,
-      "title": "Set Brochas Profesionales (3 piezas)",
+      "title": "Set Brochas Profesionales  ",
       "description": "Juego de brochas de distintas medidas, mango ergonómico.",
       "price": 18.75,
       "currencyFormat": "$",
@@ -54,8 +54,8 @@
     },
     {
       "id": 4,
-      "title": "Rodillo Antigoteo 23cm",
-      "description": "Rodillo de microfibra para acabados uniformes y sin burbujas.",
+      "title": "Pintura Automotriz ",
+      "description": "Pintura especializada para vehículos, resistente a la intemperie y con acabado duradero.",
       "price": 9.9,
       "currencyFormat": "$",
       "currencyId": "USD",
