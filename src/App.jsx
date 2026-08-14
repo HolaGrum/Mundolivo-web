@@ -9,6 +9,7 @@ import Nav from "./components/Nav";
 import SidebarOffCanvas from "./components/SidebarOffCanvas";
 import useFetch from "./hooks/useFetch"; // Importar el custom hook
 import TitleTypeWriter from "./components/TitleTypeWriter";
+import CategoryFilter from "./components/CategoryFilter";
 
 const App = () => {
   // Llama a `useCartStore` para acceder al estado del carrito y las funciones
@@ -48,9 +49,33 @@ const App = () => {
     return () => clearTimeout(timer); // Limpiar el temporizador al desmontar el componente
   }, [cart, getTotalProducts, toggleBalanceo, toggleOffcanvas]);
 
-  // Sin filtro: mostrar todos los productos
-  const filteredProducts = useMemo(() => products || [], [products]);
-  const totalFiltered = useMemo(() => products?.length || 0, [products]);
+  // Normalizar datos: `products` puede ser un array o un objeto { products, categories }
+  const filteredProducts = useMemo(() => {
+    if (!products) return [];
+    return Array.isArray(products) ? products : products.products || [];
+  }, [products]);
+
+  const totalFiltered = useMemo(() => filteredProducts.length, [filteredProducts]);
+
+  // Categorías disponibles (si vienen en el JSON)
+  const categories = useMemo(() => {
+    if (!products) return [];
+    return Array.isArray(products) ? [] : products.categories || [];
+  }, [products]);
+
+  // Estado para categoría seleccionada
+  const [selectedCategory, setSelectedCategory] = useState(null);
+
+  // Filtrar por categoría (búsqueda simple por coincidencia en título o descripción)
+  const displayedProducts = useMemo(() => {
+    if (!selectedCategory) return filteredProducts;
+    const key = selectedCategory.toLowerCase();
+    return filteredProducts.filter(
+      (p) =>
+        (p.title && p.title.toLowerCase().includes(key)) ||
+        (p.description && p.description.toLowerCase().includes(key))
+    );
+  }, [filteredProducts, selectedCategory]);
 
   return (
     <>
@@ -72,9 +97,20 @@ const App = () => {
                 Error cargando productos: {error.message}
               </h2>
             </div>
-          ) : filteredProducts.length > 0 ? (
+          ) : displayedProducts.length > 0 ? (
             <div className="col-12">
-              <ProductsList products={filteredProducts} />
+              <div className="row">
+                <div className="col-12 col-md-3">
+                  <CategoryFilter
+                    categories={categories}
+                    selected={selectedCategory}
+                    onSelect={setSelectedCategory}
+                  />
+                </div>
+                <div className="col-12 col-md-9">
+                  <ProductsList products={displayedProducts} />
+                </div>
+              </div>
             </div>
           ) : (
             <div className="col-12">

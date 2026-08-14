@@ -47,10 +47,10 @@ body {
   }
 }
 .custom-badge{
-  background-color: #1c1a26 !important;
-  color: white;
+  background-color: transparent !important;
+  color: #1c1a26 !important;
   padding: 5px 10px;
-  border-radius: 0px 0px 0px 25px ! important;
+  border-radius: 0px 0px 0px 25px;
 }
 .custom-card{
   border-radius: none !important;

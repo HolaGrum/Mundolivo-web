@@ -1,5 +1,4 @@
 import useCartStore from "../store/cartStore";
-import { BsCartPlus } from "react-icons/bs";
 
 const ProductsList = ({ products }) => {
   // Usa el store directamente para acceder a addToCart
@@ -16,11 +15,7 @@ const ProductsList = ({ products }) => {
                   className="card-img-top"
                   alt={product.title}
                 />
-                {product.isFreeShipping && (
-                  <span className="badge custom-badge position-absolute top-0 end-0">
-                    Envío gratis
-                  </span>
-                )}
+                {/* Envío gratis eliminado según petición */}
               </div>
               <div className="card-body d-flex flex-column">
                 <h5 className="card-title mb-4">{product.title}</h5>
@@ -36,7 +31,7 @@ const ProductsList = ({ products }) => {
                   className="btn btn-cart w-100 mt-auto"
                   onClick={() => addToCart(product)}
                 >
-                  Agregar al carrito &nbsp; <BsCartPlus />
+                  Agregar al carrito
                 </button>
               </div>
             </div>
