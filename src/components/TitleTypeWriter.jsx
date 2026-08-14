@@ -6,7 +6,7 @@ const TitleTypeWriter = () => {
     <section className="row align-items-center">
       <div className="col-12 col-md-7">
         <h1 className="display-5 titulo">
-          Tienda de <span style={{ color: "#ff9c08" }}>Pinturas</span> y
+          Tienda de <span style={{ color: "#96B813" }}>Pinturas</span> y
           accesorios para ferretería
         </h1>
         <h3 className="text-center">

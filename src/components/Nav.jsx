@@ -38,7 +38,7 @@ const Nav = () => {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link">Contacto</a>
+              <a className="nav-link" href="#contact">Contacto</a>
             </li>
           </ul>
           <MyCart />

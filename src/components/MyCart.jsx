@@ -1,4 +1,4 @@
-import { TbShoppingBagHeart } from "react-icons/tb";
+import cartIcon from "../assets/imgs/cart-icon.svg";
 import useOffcanvasStore from "../store/offcanvasStore";
 
 import useCartStore from "../store/cartStore";
@@ -20,7 +20,7 @@ const MyCart = () => {
 
   return (
     <button type="button" onClick={toggleOffcanvas} className={buttonClass}>
-      <TbShoppingBagHeart className="shopping-bag-icon" />
+      <img src={cartIcon} alt="Carrito" className="shopping-bag-icon" />
       <span className="position-absolute top-1 start-100 translate-middle badge rounded-pill bg-danger">
         {totalProducts}
         <span className="visually-hidden">productos en el carrito</span>

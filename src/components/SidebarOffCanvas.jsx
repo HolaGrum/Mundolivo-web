@@ -91,8 +91,8 @@ const SidebarOffCanvas = () => {
         <div className="d-flex justify-content-between align-items-center">
           <h5 className="mb-5">
             <span className="fw-bold">SUBTOTAL:</span>
-            <span className="fw-bold float-end px-2 fs-2">
-              <span style={{ color: "#ff9c08" }}>$</span>
+              <span className="fw-bold float-end px-2 fs-2">
+              <span style={{ color: "#96B813" }}>$</span>
               {calculateSubtotal().toFixed(2)}
             </span>
           </h5>
