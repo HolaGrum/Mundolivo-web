@@ -1,0 +1,32 @@
+
+.footer {
+  background-color: #23303a;
+  color: #fff;
+  padding: 20px 0;
+  opacity: 0.9;
+}
+.footer .container {
+  background-color: transparent !important;
+}
+
+.footer a {
+   font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #ff9c08 !important; 
+}
+
+.admin-links a {
+  font-size: 13px;
+  color: #9aa7b3;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.admin-links a:hover {
+  color: #ff9c08 !important;
+  opacity: 1;
+}

@@ -40,7 +40,7 @@
                     <tr>
                         <th>Producto</th>
                         <th>SKU</th>
-                        <th>Precio Vanilo</th>
+                        <th>Precio Mundo Olivos</th>
                         <th>Estado ML</th>
                         <th>ID Publicación ML</th>
                         <th class="text-end">Acciones ML</th>

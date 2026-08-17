@@ -5,7 +5,7 @@ return [
         Vanilo\Foundation\Providers\ModuleServiceProvider::class,
         Konekt\AppShell\Providers\ModuleServiceProvider::class => [
             'ui' => [
-                'name'     => 'Vanilo & Mercado Libre',
+                'name'     => 'Mundo Olivos & Mercado Libre',
                 'url'      => '/admin/mercadolibre',
                 'logo_uri' => '/assets/logo.svg',
             ],

@@ -1,1 +1,1 @@
-<img src="{{ asset('/assets/logo.svg') }}" {{ $attributes->merge(['alt' => 'Vanilo Logo']) }} />
+<img src="{{ asset('/assets/logo.svg') }}" {{ $attributes->merge(['alt' => 'Mundo Olivos Logo']) }} />

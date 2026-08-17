@@ -23,7 +23,7 @@
                 <thead class="table-light">
                     <tr>
                         <th>ID Pedido ML</th>
-                        <th>Pedido Vanilo</th>
+                        <th>Pedido Mundo Olivos</th>
                         <th>Comprador ML</th>
                         <th>Estado Pago</th>
                         <th>ID Envío</th>
@@ -67,7 +67,7 @@
                                 </a>
                                 @if($mlOrder->order)
                                     <a href="{{ route('vanilo.admin.order.show', $mlOrder->order) }}" class="btn btn-xs btn-outline-secondary">
-                                        {{ __('Ver en Vanilo') }}
+                                        {{ __('Ver en Mundo Olivos') }}
                                     </a>
                                 @endif
                             </td>

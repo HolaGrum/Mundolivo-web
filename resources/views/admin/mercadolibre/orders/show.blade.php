@@ -10,7 +10,7 @@
     </a>
     @if($order->order)
         <a href="{{ route('vanilo.admin.order.show', $order->order) }}" class="btn btn-sm btn-dark ms-2">
-            <i class="fas fa-shopping-bag me-1"></i> {{ __('Ver Pedido en Vanilo #') . $order->order->number }}
+            <i class="fas fa-shopping-bag me-1"></i> {{ __('Ver Pedido en Mundo Olivos #') . $order->order->number }}
         </a>
     @endif
 @endpush
@@ -55,7 +55,7 @@
                     </div>
                 @else
                     <div class="p-4 text-center text-muted">
-                        No hay ítems detallados o el pedido en Vanilo no está vinculado.
+                        No hay ítems detallados o el pedido en Mundo Olivos no está vinculado.
                     </div>
                 @endif
             </x-appshell::card>
